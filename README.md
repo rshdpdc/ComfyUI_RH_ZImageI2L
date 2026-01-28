@@ -29,10 +29,32 @@ pip install -r requirements.txt
 
 Models will be automatically downloaded from ModelScope/HuggingFace on first run:
 
-- [Tongyi-MAI/Z-Image](https://modelscope.cn/models/Tongyi-MAI/Z-Image) - Base transformer
-- [Tongyi-MAI/Z-Image-Turbo](https://modelscope.cn/models/Tongyi-MAI/Z-Image-Turbo) - Text encoder & VAE
-- [DiffSynth-Studio/General-Image-Encoders](https://modelscope.cn/models/DiffSynth-Studio/General-Image-Encoders) - Image encoders (SigLIP2, DINOv3)
-- [DiffSynth-Studio/Z-Image-i2L](https://modelscope.cn/models/DiffSynth-Studio/Z-Image-i2L) - Image to LoRA model
+| Model | Description |
+|-------|-------------|
+| [Tongyi-MAI/Z-Image](https://modelscope.cn/models/Tongyi-MAI/Z-Image) | Base transformer |
+| [Tongyi-MAI/Z-Image-Turbo](https://modelscope.cn/models/Tongyi-MAI/Z-Image-Turbo) | Text encoder & VAE |
+| [DiffSynth-Studio/General-Image-Encoders](https://modelscope.cn/models/DiffSynth-Studio/General-Image-Encoders) | Image encoders (SigLIP2, DINOv3) |
+| [DiffSynth-Studio/Z-Image-i2L](https://modelscope.cn/models/DiffSynth-Studio/Z-Image-i2L) | Image to LoRA model |
+
+### Model Installation Path
+
+Models are cached in the HuggingFace/ModelScope default cache directory:
+
+| OS | Default Path |
+|----|--------------|
+| Linux | `~/.cache/huggingface/hub/` |
+| Windows | `C:\Users\<username>\.cache\huggingface\hub\` |
+| macOS | `~/.cache/huggingface/hub/` |
+
+You can customize the cache directory by setting environment variables:
+
+```bash
+# HuggingFace cache
+export HF_HOME=/path/to/your/cache
+
+# or ModelScope cache
+export MODELSCOPE_CACHE=/path/to/your/cache
+```
 
 ## 🚀 Usage
 
