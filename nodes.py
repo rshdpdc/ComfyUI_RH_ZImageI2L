@@ -13,6 +13,9 @@ import numpy as np
 
 import gc
 from comfy import model_management as mm
+import shutil
+
+CHECKING_ZIMAGE_LORA_PREFIX = 'zimage_i2l_lora'
 
 class AnyComboList(list):
     """
@@ -99,7 +102,7 @@ class RunningHub_ZImageI2L_LoraGenerator:
 
     # Match ComfyUI's LoRA dropdown input type (combo list from folder_paths),
     # but keep it validation-stable even if the LoRA file list changes at runtime.
-    RETURN_TYPES = (AnyComboList(folder_paths.get_filename_list("loras")), 'STRING')
+    RETURN_TYPES = (AnyComboList(folder_paths.get_filename_list("loras")), 'LORA_PATH')
     RETURN_NAMES = ('lora_name', 'lora_path')
     FUNCTION = "generate"
     CATEGORY = "RunningHub/ZImageI2L"
@@ -110,7 +113,7 @@ class RunningHub_ZImageI2L_LoraGenerator:
         return img
 
     def __init__(self):
-        self.lora_name = f"zimage_i2l_lora_{str(uuid.uuid4())}.safetensors"
+        self.lora_name = f"{CHECKING_ZIMAGE_LORA_PREFIX}_{str(uuid.uuid4())}.safetensors"
 
     def generate(self, pipeline, training_images, **kwargs):
 
@@ -131,8 +134,70 @@ class RunningHub_ZImageI2L_LoraGenerator:
         # lora_name is a filename under models/loras (e.g. *.safetensors)
         return (self.lora_name, lora_path)
 
+
+class RunningHub_ZImageI2L_Saver:
+    """
+    RH platform compatible output node for saving LoRA files.
+    Follows ComfyUI native output specification for RunningHub integration.
+    """
+    def __init__(self):
+        self.type = "output"  # Required for RH platform
+
+    @classmethod
+    def INPUT_TYPES(s):
+        return {
+            "required": {
+                "lora_path": ("LORA_PATH", {"forceInput": True}),
+                "filename_prefix": ("STRING", {"default": "zimage_lora"}),
+            }
+        }
+
+    RETURN_TYPES = ()  # Output node returns via UI dict
+    FUNCTION = "save"
+    CATEGORY = "RunningHub/ZImageI2L"
+    OUTPUT_NODE = True  # Required for RH platform
+
+    def save(self, lora_path, filename_prefix="lora"):
+
+        lora_path = str(lora_path)
+
+        # Check if source file exists
+        if not os.path.exists(lora_path):
+            raise ValueError(f"illegal lora path")
+        
+        if CHECKING_ZIMAGE_LORA_PREFIX not in lora_path:
+            raise ValueError(f"illegal lora path")
+
+        # Use folder_paths to get proper output directory (RH platform requirement)
+        output_dir = folder_paths.get_directory_by_type("output")
+        full_output_folder, filename, counter, subfolder, filename_prefix = \
+            folder_paths.get_save_image_path(filename_prefix, output_dir)
+
+        # Build final filename with counter
+        file_name_with_ext = f"{filename}_{counter:05}_.safetensors"
+        full_path = os.path.join(full_output_folder, file_name_with_ext)
+
+        # Copy the LoRA file to output directory
+        shutil.copy2(lora_path, full_path)
+        print(f'[RH] LoRA saved to output: {full_path}')
+
+        # Return UI dict for RH platform to capture the file
+        return {
+            "ui": {
+                "images": [
+                    {
+                        "filename": file_name_with_ext,
+                        "subfolder": subfolder,
+                        "type": self.type
+                    }
+                ]
+            }
+        }
+
+
 NODE_CLASS_MAPPINGS = {
     "RunningHub_ZImageI2L_Loader": RunningHub_ZImageI2L_Loader,
     "RunningHub_ZImageI2L_LoraGenerator": RunningHub_ZImageI2L_LoraGenerator,
+    "RunningHub_ZImageI2L_Saver": RunningHub_ZImageI2L_Saver,
 }
 
