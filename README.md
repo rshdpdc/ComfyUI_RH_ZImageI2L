@@ -99,6 +99,18 @@ set MODELSCOPE_CACHE=D:\models\modelscope
 3. Use **ZImageI2L Saver** to save the generated LoRA
 4. Use the generated LoRA with any standard LoRA loader node
 
+### Example Workflow
+
+An example API workflow is provided in the `workflows` folder:
+
+- [`workflows/zimage_i2l_example_api.json`](workflows/zimage_i2l_example_api.json) - Complete workflow demonstrating LoRA generation and usage
+
+This workflow includes:
+- Loading reference images (4 images)
+- Generating LoRA with ZImageI2L nodes
+- Applying the generated LoRA to Z-Image model
+- Generating images with the personalized LoRA
+
 ## 📝 Parameters
 
 ### ZImageI2L LoRA Generator
